@@ -1,2 +1,11 @@
-spendreport/FraudDetector.class
+spendreport_detailed/DetailedAlertSink.class
+spendreport_detailed/DetailedTransactionSource$1.class
+spendreport_detailed/DetailedTransactionSource$RateLimitedIterator.class
+spendreport_detailed/DetailedTransactionIterator.class
+spendreport_detailed/DetailedFraudDetectionJob.class
 spendreport/FraudDetectionJob.class
+spendreport_detailed/DetailedFraudDetector.class
+spendreport_detailed/DetailedAlert.class
+spendreport_detailed/DetailedTransactionSource.class
+spendreport/FraudDetector.class
+spendreport_detailed/DetailedTransaction.class

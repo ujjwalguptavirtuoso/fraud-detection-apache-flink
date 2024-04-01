@@ -1,2 +1,9 @@
+/Users/ujjwalgupta/class_projects/frauddetection/src/main/java/spendreport_detailed/DetailedFraudDetectionJob.java
+/Users/ujjwalgupta/class_projects/frauddetection/src/main/java/spendreport_detailed/DetailedFraudDetector.java
+/Users/ujjwalgupta/class_projects/frauddetection/src/main/java/spendreport_detailed/DetailedAlertSink.java
 /Users/ujjwalgupta/class_projects/frauddetection/src/main/java/spendreport/FraudDetectionJob.java
+/Users/ujjwalgupta/class_projects/frauddetection/src/main/java/spendreport_detailed/DetailedTransactionIterator.java
+/Users/ujjwalgupta/class_projects/frauddetection/src/main/java/spendreport_detailed/DetailedTransaction.java
 /Users/ujjwalgupta/class_projects/frauddetection/src/main/java/spendreport/FraudDetector.java
+/Users/ujjwalgupta/class_projects/frauddetection/src/main/java/spendreport_detailed/DetailedTransactionSource.java
+/Users/ujjwalgupta/class_projects/frauddetection/src/main/java/spendreport_detailed/DetailedAlert.java
