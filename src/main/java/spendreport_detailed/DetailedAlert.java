@@ -2,6 +2,9 @@ package spendreport_detailed;
 
 import java.util.Objects;
 
+/**
+ * DetailedAlert Class with extra information about the transaction
+ */
 public final class DetailedAlert {
 
     private long id;

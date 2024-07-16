@@ -5,19 +5,23 @@ import java.sql.Timestamp;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 
+
+/**
+ *  This iterator generates DetailedTransaction objects, each representing a transaction with specific attributes.
+ */
 public class DetailedTransactionIterator implements Iterator<DetailedTransaction>, Serializable {
 
     private static final long serialVersionUID = 1L;
     private static final Timestamp INITIAL_TIMESTAMP = Timestamp.valueOf("2019-01-01 00:00:00");
-
-    //private static final List<String> zipCodes = Arrays.asList("01003", "02115", "78712");
     private static final long SIX_MINUTES = 360000L;
     private final boolean bounded;
     private int index = 0;
     private long timestamp;
 
+
+     // Initializing the data list with multiple DetailedTransaction objects
+     //  having zipCode value as an empty String, which is populated later by the iterator
     private static List<DetailedTransaction> data = Arrays.asList(new DetailedTransaction(1L, 0L, 188.23, ""),
             new DetailedTransaction(2L, 0L, 374.79, ""),
             new DetailedTransaction(3L, 0L, 112.15, ""),
@@ -92,33 +96,24 @@ public class DetailedTransactionIterator implements Iterator<DetailedTransaction
         }
     }
 
-//    public DetailedTransaction next() {
-//        DetailedTransaction transaction = (DetailedTransaction)data.get(this.index++);
-//        transaction.setTimestamp(this.timestamp);
-//        this.timestamp += 360000L;
-//        return transaction;
-//    }
-//    static Random random = new Random();
-
+    /**
+     * This method populates the timestamp value and zipcode value for the detailed transaction objects.
+     * @return DetailedTransaction
+     */
     @Override
     public DetailedTransaction next() {
         //create an arraylist of zipcodes
         List<String> zipCodes = Arrays.asList("01003", "02115", "78712");
 
-        DetailedTransaction transaction = data.get(index++);
-        transaction.setTimestamp(timestamp);
+        DetailedTransaction detailedTransaction = data.get(index++);
+        detailedTransaction.setTimestamp(timestamp);
 
-        //randomly select any three of those values
+        //randomly select any index among the three values
         int j = (int)(Math.random()*(3));
-        transaction.setZipCode(zipCodes.get(j));
+        //set the value of zipcode
+        detailedTransaction.setZipCode(zipCodes.get(j));
 
         timestamp += SIX_MINUTES;
-        return transaction;
+        return detailedTransaction;
     }
-
-//    private static String getRandomZipCode() {
-//        Random random = new Random();
-//        int zipIndex = random.nextInt(zipCodes.size());
-//        return zipCodes.get(zipIndex);
-//    }
 }

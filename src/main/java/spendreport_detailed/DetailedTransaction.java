@@ -2,17 +2,28 @@ package spendreport_detailed;
 
 import java.util.Objects;
 
+/**
+ * New detailed transaction with accountId, timestamp, amount and zipCode details.
+ */
 public final class DetailedTransaction {
 
     private long accountId;
     private long timestamp;
     private double amount;
+    //Zipcode added for the new detailed transaction
     private String zipCode;
 
     public DetailedTransaction(){
 
     }
 
+    /**
+     * Constructor for the DetailedTransaction
+     * @param accountId
+     * @param timestamp
+     * @param amount
+     * @param zipCode
+     */
     public DetailedTransaction(long accountId, long timestamp, double amount, String zipCode) {
         this.accountId = accountId;
         this.timestamp = timestamp;
@@ -44,10 +55,12 @@ public final class DetailedTransaction {
         this.amount = amount;
     }
 
+    //Getter for the zipCode of the transaction
     public String getZipCode() {
         return zipCode;
     }
 
+    //Setter for the zipCode of the transaction
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
